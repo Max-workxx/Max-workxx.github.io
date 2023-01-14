@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+
+
+    <img src="/img/char.png" id="img-char" alt="">
+
+        <h1 class="text01">SPADIKAM ROLEPLAY
+    </h2>
+    <h3 id="about-smrp">Spadikam Roleplay is the One of the best Role Player server in Kerala<br>which gives best and
+        advanced roleplay background for all players</h3>
+
+
+
+        <div id="button-div">
+            <button id="button1" onclick="hai()">Connect 1</button>
+            <button id="button2"
+                onclick="alert('Connect 2 Will Only Works When Connect1 Is Down or Not Responding!')">Connect 2</button>
+            <img src="" alt="">
+        </div>
+
+
+        <p id="copyright">Copyright © 2023 !CallMeMax#0001 | Spadikam Roleplay</p>
+
+
+
+        <script>
+
+            function hai() {
+                // window.location.href = 'https://discord.com/api/oauth2/authorize?client_id=1059084668428881982&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fconnect&response_type=code&scope=identify%20guilds'
+                fetch('https://ifconfig.me/ip', {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "text/plain"
+                    }
+                }).then(result => (result.text())).then(ip => {
+                    if (ip.length) {
+
+                        window.location.href = '/auth?ip=' + ip;
+
+                    }
+                })
+            }
+        </script>
+
+</body>
+
+</html>
